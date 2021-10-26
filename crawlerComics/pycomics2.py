@@ -4,15 +4,24 @@ import time
 
 driver = Chrome(executable_path="/Users/lee-chih-chun/PycharmProjects/web-crawler/crawlerComics/chromedriver")
 
-
+# 武煉巔峰
 # url = "https://www.cocomanga.com/12202/"
-url = "https://www.cocomanga.com/10136/"
+# 元尊
+# url = "https://www.cocomanga.com/10136/"
+# 重生之都市修仙
 # url = "https://www.cocomanga.com/12214/"
+# 學士再生
 # url = "https://www.cocomanga.com/12221/"
+# 劍逆蒼穹
 # url = "https://www.cocomanga.com/12297/"
+# 滄元圖
 # url = "https://www.cocomanga.com/16368/"
+# 凡人修仙傳
 # url = "https://www.cocomanga.com/16465/"
+# 凡人修仙傳 仙界篇
 # url = "https://www.cocomanga.com/17529/"
+
+# 因為有hcaptch擋住 再找時間研究破解 暫時一次一項
 
 driver.get(url)
 
@@ -35,16 +44,18 @@ for link in links:
         print(link.get('title'))
         print("https://www.cocomanga.com" + link.get('href'))
 
-    if count > 2 :
+    if count > 5 :
         break
 
 time.sleep(5)
 print("=" * 30)
 
-time.sleep(10)
+time.sleep(5)
 
 # driver關閉
 driver.quit()
+
+
 
 
 
